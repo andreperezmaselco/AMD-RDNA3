@@ -1,4 +1,4 @@
-# AMD RDNA3.5 Instruction Set Architecture
+# AMD RDNA3.5
 
 [![Linux](https://github.com/andreperezmaselco/AMD-RDNA3.5-Instruction-Set-Architecture/actions/workflows/linux.yml/badge.svg)](https://github.com/andreperezmaselco/AMD-RDNA3.5-Instruction-Set-Architecture/actions/workflows/linux.yml)
 
