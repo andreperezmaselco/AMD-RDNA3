@@ -59,17 +59,9 @@ enum {
     S_PACK_HL_B32_B16 = 53
 };
 
-struct SOP2 {
-    uint8_t SSRC0;
-    uint8_t SSRC1;
-    uint8_t SDST : 7;
-    uint8_t OP : 7;
-    uint8_t ENCODING : 2;
-};
-
-uint32_t SOP2(const uint8_t SSRC0,
+uint32_t SOP2(const uint8_t OP,
+              const uint8_t SSRC0,
               const uint8_t SSRC1,
-              const uint8_t SDST,
-              const uint8_t OP);
+              const uint8_t SDST);
 
 #endif
