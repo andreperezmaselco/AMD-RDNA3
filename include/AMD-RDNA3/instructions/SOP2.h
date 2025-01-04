@@ -1,3 +1,6 @@
+#ifndef AMD_RDNA3_INSTRUCTIONS_SOP2_H
+#define AMD_RDNA3_INSTRUCTIONS_SOP2_H
+
 /* C */
 #include <stdint.h>
 
@@ -53,22 +56,7 @@ enum {
     S_PACK_LL_B32_B16 = 50,
     S_PACK_LH_B32_B16 = 51,
     S_PACK_HH_B32_B16 = 52,
-    S_PACK_HL_B32_B16 = 53,
-    S_ADD_F32 = 64,
-    S_SUB_F32 = 65,
-    S_MIN_F32 = 66,
-    S_MAX_F32 = 67,
-    S_MUL_F32 = 68,
-    S_FMAAK_F32 = 69,
-    S_FMAMK_F32 = 70,
-    S_FMAC_F32 = 71,
-    S_CVT_PK_RTZ_F16_F32 = 72,
-    S_ADD_F16 = 73,
-    S_SUB_F16 = 74,
-    S_MIN_F16 = 75,
-    S_MAX_F16 = 76,
-    S_MUL_F16 = 77,
-    S_FMAC_F16 = 78
+    S_PACK_HL_B32_B16 = 53
 };
 
 struct SOP2 {
@@ -83,3 +71,5 @@ uint32_t SOP2(const uint8_t SSRC0,
               const uint8_t SSRC1,
               const uint8_t SDST,
               const uint8_t OP);
+
+#endif

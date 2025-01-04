@@ -1,8 +1,8 @@
 /* C */
 #include <stdint.h>
 
-/* AMD RDNA3.5 */
-#include "AMD-RDNA3.5/instructions/SOP2.h"
+/* AMD RDNA3 */
+#include "AMD-RDNA3/instructions/SOP2.h"
 
 uint32_t SOP2(const uint8_t SSRC0,
               const uint8_t SSRC1,
