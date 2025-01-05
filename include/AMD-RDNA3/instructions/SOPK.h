@@ -32,15 +32,8 @@ enum {
     S_WAITCNT_LGKMCNT = 27
 };
 
-struct SOPK {
-    uint16_t SIMM16;
-    uint8_t SDST : 7;
-    uint8_t OP : 5;
-    uint8_t ENCODING : 4;
-};
-
-uint32_t SOPK(const uint8_t SIMM16,
-              const uint8_t SDST,
-              const uint8_t OP);
+uint32_t SOPK(const uint8_t OP,
+              const uint16_t SIMM16,
+              const uint8_t SDST);
 
 #endif
