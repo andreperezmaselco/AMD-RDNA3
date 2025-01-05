@@ -38,17 +38,42 @@ enum {
     S_AND_SAVEEXEC_B32 = 32,
     S_AND_SAVEEXEC_B64 = 33,
     S_OR_SAVEEXEC_B32 = 34,
+    S_OR_SAVEEXEC_B64 = 35,
+    S_XOR_SAVEEXEC_B32 = 36,
+    S_XOR_SAVEEXEC_B64 = 37,
+    S_NAND_SAVEEXEC_B32 = 38,
+    S_NAND_SAVEEXEC_B64 = 39,
+    S_NOR_SAVEEXEC_B32 = 40,
+    S_NOR_SAVEEXEC_B64 = 41,
+    S_XNOR_SAVEEXEC_B32 = 42,
+    S_XNOR_SAVEEXEC_B64 = 43,
+    S_AND_NOT0_SAVEEXEC_B32 = 44,
+    S_AND_NOT0_SAVEEXEC_B64 = 45,
+    S_OR_NOT0_SAVEEXEC_B32 = 46,
+    S_OR_NOT0_SAVEEXEC_B64 = 47,
+    S_AND_NOT1_SAVEEXEC_B32 = 48,
+    S_AND_NOT1_SAVEEXEC_B64 = 49,
+    S_OR_NOT1_SAVEEXEC_B32 = 50,
+    S_OR_NOT1_SAVEEXEC_B64 = 51,
+    S_AND_NOT0_WREXEC_B32 = 52,
+    S_AND_NOT0_WREXEC_B64 = 53,
+    S_AND_NOT1_WREXEC_B32 = 54,
+    S_AND_NOT1_WREXEC_B64 = 55,
+    S_MOVRELS_B32 = 64,
+    S_MOVRELS_B64 = 65,
+    S_MOVRELD_B32 = 66,
+    S_MOVRELD_B64 = 67,
+    S_MOVRELSD_2_B32 = 68,
+    S_GETPC_B64 = 71,
+    S_SETPC_B64 = 72,
+    S_SWAPPC_B64 = 73,
+    S_RFE_B64 = 74,
+    S_SENDMSG_RTN_B32 = 76,
+    S_SENDMSG_RTN_B64 = 77
 };
 
-struct SOP1 {
-    uint8_t SSRC0;
-    uint8_t OP;
-    uint8_t SDST : 7;
-    uint16_t ENCODING : 9;
-};
-
-uint32_t SOP1(const uint8_t SSRC0,
-              const uint8_t OP,
+uint32_t SOP1(const uint8_t OP,
+              const uint8_t SSRC0,
               const uint8_t SDST);
 
 #endif
