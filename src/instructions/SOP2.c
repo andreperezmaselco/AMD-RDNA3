@@ -8,13 +8,11 @@ uint32_t SOP2(const uint8_t OP,
               const uint8_t SSRC0,
               const uint8_t SSRC1,
               const uint8_t SDST) {
-    const struct {
-        uint8_t SSRC0;
-        uint8_t SSRC1;
-        uint8_t SDST : 7;
-        uint8_t OP : 7;
-        uint8_t ENCODING : 2;
-    } instruction = {SSRC0, SSRC1, SDST, OP, 0b10};
-
-    return *(uint32_t *)&instruction;
+    uint32_t instruction = 0x00000000;
+    instruction |= SSRC0;
+    instruction |= SSRC1 << 8;
+    instruction |= SDST  << 16;
+    instruction |= OP    << 24;
+    instruction |= 0b10  << 30;
+    return instruction;
 }
