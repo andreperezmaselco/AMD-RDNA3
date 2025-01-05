@@ -12,7 +12,7 @@ uint32_t SOP2(const uint8_t OP,
     instruction |= SSRC0;
     instruction |= SSRC1 << 8;
     instruction |= SDST  << 16;
-    instruction |= OP    << 24;
+    instruction |= OP    << 23;
     instruction |= 0b10  << 30;
     return instruction;
 }
