@@ -8,6 +8,7 @@ add_library(AMD-RDNA3 SHARED
             src/instructions/SOP1.c
             src/instructions/SOP2.c
             src/instructions/SOPC.c
-            src/instructions/SOPK.c)
+            src/instructions/SOPK.c
+            src/instructions/SOPP.c)
 
 target_include_directories(AMD-RDNA3 PRIVATE include)

@@ -1,0 +1,48 @@
+#ifndef AMD_RDNA3_INSTRUCTIONS_SOPP_H
+#define AMD_RDNA3_INSTRUCTIONS_SOPP_H
+
+/* C */
+#include <stdint.h>
+
+enum {
+    S_NOP = 0,
+    S_SETKILL = 1,
+    S_SETHALT = 2,
+    S_SLEEP = 3,
+    S_SET_INST_PREFETCH_DISTANCE = 4,
+    S_CLAUSE = 5,
+    S_DELAY_ALU = 7,
+    S_WAITCNT = 9,
+    S_WAIT_IDLE = 10,
+    S_WAIT_EVENT = 11,
+    S_TRAP = 16,
+    S_ROUND_MODE = 17,
+    S_DENORM_MODE = 18,
+    S_CODE_END = 31,
+    S_BRANCH = 32,
+    S_CBRANCH_SCC0 = 33,
+    S_CBRANCH_SCC1 = 34,
+    S_CBRANCH_VCCZ = 35,
+    S_CBRANCH_VCCNZ = 36,
+    S_CBRANCH_EXECZ = 37,
+    S_CBRANCH_EXECNZ = 38,
+    S_CBRANCH_CDBGSYS = 39,
+    S_CBRANCH_CDBGUSER = 40,
+    S_CBRANCH_CDBGSYS_OR_USER = 41,
+    S_CBRANCH_CDBGSYS_AND_USER = 42,
+    S_ENDPGM = 48,
+    S_ENDPGM_SAVED = 49,
+    S_ENDPGM_ORDERED_PS_DONE = 50,
+    S_WAKEUP = 52,
+    S_SETPRIO = 53,
+    S_SENDMSG = 54,
+    S_SENDMSGHALT = 55,
+    S_INCPERFLEVEL = 56,
+    S_DECPERFLEVEL = 57,
+    S_ICACHE_INV = 60,
+    S_BARRIER = 61
+};
+
+uint32_t SOPP(const uint8_t OP, const uint16_t SIMM16);
+
+#endif
