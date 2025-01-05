@@ -1,19 +1,21 @@
 /* AMD RDNA3 */
 #include "AMD-RDNA3/instructions/SMEM.h"
 
-uint64_t SMEM(void) {
-    const struct {
-        uint8_t SBASE : 6;
-        uint8_t SDATA : 7;
-        uint8_t DLC : 1;
-        uint8_t GLC : 1;
-        uint8_t : 3;
-        uint8_t OP;
-        uint8_t ENCODING : 6; /* 0b111101 */
-        uint32_t OFFSET : 21;
-        uint8_t : 4;
-        uint8_t SOFFSET : 7;
-    } instruction;
-
-    return *(uint64_t *)&instruction;
+uint64_t SMEM(const uint8_t SBASE,
+              const uint8_t SDATA,
+              const uint8_t DLC,
+              const uint8_t GLC,
+              const uint8_t OP,
+              const uint32_t OFFSET,
+              const uint8_t SOFFSET) {
+    uint64_t instruction = 0x0000000000000000;
+    instruction |= (uint64_t)SBASE;
+    instruction |= (uint64_t)SDATA    << 6;
+    instruction |= (uint64_t)DLC      << 14;
+    instruction |= (uint64_t)GLC      << 16;
+    instruction |= (uint64_t)OP       << 18;
+    instruction |= (uint64_t)0b111101 << 26;
+    instruction |= (uint64_t)OFFSET   << 32;
+    instruction |= (uint64_t)SOFFSET  << 57;
+    return instruction;
 }

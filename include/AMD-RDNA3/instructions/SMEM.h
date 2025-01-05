@@ -19,6 +19,12 @@ enum {
     S_DCACHE_INV = 33
 };
 
-uint64_t SMEM(/* TODO */ void);
+uint64_t SMEM(const uint8_t SBASE,
+              const uint8_t SDATA,
+              const uint8_t DLC,
+              const uint8_t GLC,
+              const uint8_t OP,
+              const uint32_t OFFSET,
+              const uint8_t SOFFSET);
 
 #endif
