@@ -1,6 +1,3 @@
-/* C */
-#include <stdint.h>
-
 /* AMD RDNA3 */
 #include "AMD-RDNA3/instructions/SOP2.h"
 
