@@ -59,6 +59,9 @@ enum {
     S_PACK_HL_B32_B16 = 53
 };
 
+#ifdef __cplusplus
+extern "C"
+#endif
 uint32_t SOP2(const uint8_t OP,
               const uint8_t SSRC0,
               const uint8_t SSRC1,
