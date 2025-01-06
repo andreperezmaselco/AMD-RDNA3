@@ -63,8 +63,8 @@ enum {
 extern "C"
 #endif
 uint32_t SOP2(const uint8_t OP,
-              const uint8_t SSRC0,
+              const uint8_t SDST,
               const uint8_t SSRC1,
-              const uint8_t SDST);
+              const uint8_t SSRC0);
 
 #endif
