@@ -22,6 +22,8 @@ add_library(AMD-RDNA3 SHARED
 
 target_include_directories(AMD-RDNA3 PRIVATE include)
 
+include(CTest)
+
 add_executable(SOP2-test src/test/SOP2-test.cpp)
 
 target_link_libraries(SOP2-test PRIVATE AMD-RDNA3 gtest_main)
