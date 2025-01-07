@@ -54,8 +54,8 @@ enum {
 };
 
 uint32_t VOP2(const uint8_t OP,
-              const uint16_t SRC0,
+              const uint8_t VDST,
               const uint8_t VSRC1,
-              const uint8_t VDST);
+              const uint16_t SRC0);
 
 #endif
