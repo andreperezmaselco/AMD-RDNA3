@@ -9,3 +9,9 @@ Project to study the [AMD RDNA3 Instruction Set Architecture specification](http
 ```
 cmake -B build -G Ninja && cmake --build build
 ```
+
+## Test
+
+```
+ctest --test-dir build --output-on-failure
+```
