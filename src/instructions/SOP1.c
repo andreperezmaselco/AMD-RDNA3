@@ -4,10 +4,9 @@
 uint32_t SOP1(const uint8_t OP,
               const uint8_t SSRC0,
               const uint8_t SDST) {
-    uint32_t instruction = 0x00000000;
-    instruction |= SSRC0;
+    uint32_t instruction = (uint32_t)SSRC0;
     instruction |= SDST        << 8;
     instruction |= OP          << 16;
-    instruction |= 0b101111101 << 23;
+    instruction |= 0b101111101 << 23; /* ENCODING */
     return instruction;
 }

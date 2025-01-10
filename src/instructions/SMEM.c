@@ -8,13 +8,12 @@ uint64_t SMEM(const uint8_t SBASE,
               const uint8_t OP,
               const uint32_t OFFSET,
               const uint8_t SOFFSET) {
-    uint64_t instruction = 0x0000000000000000;
-    instruction |= (uint64_t)SBASE;
+    uint64_t instruction = (uint64_t)SBASE;
     instruction |= (uint64_t)SDATA    << 6;
     instruction |= (uint64_t)DLC      << 14;
     instruction |= (uint64_t)GLC      << 16;
     instruction |= (uint64_t)OP       << 18;
-    instruction |= (uint64_t)0b111101 << 26;
+    instruction |= (uint64_t)0b111101 << 26; /* ENCODING */
     instruction |= (uint64_t)OFFSET   << 32;
     instruction |= (uint64_t)SOFFSET  << 57;
     return instruction;
