@@ -6,8 +6,8 @@ uint32_t VOP2(const uint8_t OP,
               const uint8_t VSRC1,
               const uint16_t SRC0) {
     uint32_t instruction = (uint32_t)SRC0;
-    instruction |= VSRC1 << 9;
-    instruction |= VDST  << 17;
-    instruction |= OP    << 25;
+    instruction |= (uint32_t)VSRC1 << 9;
+    instruction |= (uint32_t)VDST  << 17;
+    instruction |= (uint32_t)OP    << 25;
     return instruction;
 }
